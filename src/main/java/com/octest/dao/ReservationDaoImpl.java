@@ -51,16 +51,16 @@ public class ReservationDaoImpl implements ReservationDAO{
         try {
             connexion = daoFactory.getConnection();
             statement = connexion.createStatement();
-            resultat = statement.executeQuery("SELECT reservation.idReservation,room.type,room.prix,room.equipements,room.nombrePersonnes,reservation.dateArrivee,reservation.dateDepart FROM reservation inner join room on reservation.chambreReservee=room.idRoom");
+            resultat = statement.executeQuery("SELECT reservation.idReservation,room.type,room.prix,room.equipements,room.nombrePersonnes,reservation.dateArrive,reservation.dateDepart FROM reservation inner join room on reservation.chambreReservee=room.idRoom");
 
             while (resultat.next()) {
-
+                System.out.println(resultat.getString("type"));
             	int idReservation= resultat.getInt("idReservation");
                 String type =resultat.getString("type");
             	int prix=resultat.getInt("prix");
             	String equipements=resultat.getString("equipements");
-            	int nombresPersonnes=resultat.getInt("nombresPersonnes");
-                Date dateArrivee=resultat.getDate("dateArrivee");
+            	int nombresPersonnes=resultat.getInt("nombrePersonnes");
+                Date dateArrivee=resultat.getDate("dateArrive");
                 Date dateDepart=resultat.getDate("dateDepart");
                 
                 reservationMaked reservMaked  = new reservationMaked();

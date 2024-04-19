@@ -105,6 +105,7 @@ public class RoomDaoImpl implements RoomDAO {
             resultat = statement.executeQuery("SELECT * FROM Room where disponibilite=false and nombresPersonnes="+NumberPersons+";");
 
             while (resultat.next()) {
+            	System.out.println(resultat.getString("equipements"));
                 int id = resultat.getInt("idRoom");
                 String type=resultat.getString("type");
             	int prix=resultat.getInt("prix");

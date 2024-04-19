@@ -84,16 +84,18 @@ body {
 }
 
 
-\\Cards 
+\\Cards Room
 
-.cardsRoom {
+.cardsRoom{
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap:wrap;
 }
 
+
 .card {
-    width: calc(33.33% - 20px); 
+    width: calc(33.33% - 40px); 
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -141,14 +143,200 @@ body {
 .card button:hover {
     background-color: #0056b3;
 }
+#cardsRoomType,#cardsRoomNumberPerson,#cardsRoom,#cardsRoomDate{
+	background:#cce0ff;
+	display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    padding:30px 20px;
+}
 
+#btn-consultreserv{
+    background-color: rgba(60, 155, 190, 0.6);
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 200px;
+    border-radius: 30px;
+    border-style: none;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+#btn-consultreserv:hover{
+    background-color: rgba(70, 110, 180, 0.6);
+}
+\\search 
 
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+#search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-group {
+	display:flex;
+	flex-direction:row;
+	padding:10px;
+    margin-bottom: 20px;
+}
+
+.search-group input[type="date"],
+.search-group input[type="text"],
+.search-group input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 200px;
+}
+
+.search-group button {
+    padding: 8px 16px;
+    background-color: #808080;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-group button:hover {
+    background-color: #004000;
+}
+
+\\ Formulaire de reservation
+
+#reserveRoom{
+	background-color:red;
+}
+form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    
+    
+
+\\Cards Reservation
+
+.cardsReservation{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.card-reserve {
+    width: calc(90% - 40px); 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#card2{
+	background:#a3ed9a;
+	display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    padding:30px 20px;
+}
+.card-reserve #idReservation {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-reserve #type {
+    font-size: 16px;
+    color: #555;
+}
+
+.card-reserve #prix {
+    font-size: 16px;
+    color: #555;
+}
+
+.card-reserve #equipements {
+    font-size: 14px;
+    color: #777;
+}
+
+.card-reserve #nombresPersonnes {
+    font-size: 14px;
+    color: #777;
+}
+
+.card-reserve #dateArrivee {
+    font-size: 14px;
+    color: #777;
+}
+
+.card-reserve #dateDepart {
+    font-size: 14px;
+    color: #777;
+}
+
+#btn-consultchambre{
+    background-color: rgba(102, 205, 170, 0.6);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 200px;
+    border-radius: 30px;
+    border-style: none;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+#btn-consultchambre:hover{
+    background-color: rgba(152, 255, 190, 0.6);
+}
+#cnsltReserveButton,#cnsltchambre{
+	margin:20px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
+.roomAvailable,.consultReservation{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 50px 0;
+    padding: 50px 50px;
 }
 
 .container-footer {
@@ -203,3 +391,4 @@ footer {
 .footer-section ul li span {
     margin-right: 10px;
 }
+
